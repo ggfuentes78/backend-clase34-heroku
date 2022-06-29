@@ -8,7 +8,6 @@ module.exports = {
             script: 'src/index.js',
             watch: true,
             autorestart: true,
-            instances: 'max',
             env:{
                 NODE_ENV: 'development',
             },

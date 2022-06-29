@@ -1,12 +1,13 @@
 {
-  "name": "clase26",
+  "name": "clase34",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon ./src/index.js",
-    "start": "pm2-runtime start ecosystem.config.js --env production",
+    "start": "node ./src/index.js",
+    "start:pm2": "pm2-runtime start ecosystem.config.js --env production",
     "prod": "pm2 start ecosystem.config.js",
     "prof:artillery": "artillery quick --count 20 -n 50 http://localhost:8080/info > result_info_sinConsoleLog.txt",
     "prof:autocannon": "autocannon -c 100 -d 20 http://localhost:8080/info",
@@ -32,6 +33,7 @@
     "normalizr": "^3.6.2",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
+    "pg": "^8.7.3",
     "pm2": "^5.2.0",
     "pug": "^3.0.2",
     "socket.io": "^4.4.1",
