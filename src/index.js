@@ -178,6 +178,7 @@ aplicacion.use (express.json());
 aplicacion.use(express.urlencoded({extended: true}));
 
 const publicPath = path.resolve(__dirname, '../public');
+console.log("public", publicPath)
 aplicacion.use(express.static(publicPath));
 
 aplicacion.use('/api', mainRouter);
